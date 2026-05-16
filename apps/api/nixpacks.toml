@@ -1,0 +1,18 @@
+# Nixpacks build config for the Portfolio Wars API service on Railway.
+# Railway picks this up automatically. The build runs at the monorepo root
+# so workspace dependencies (@pw/shared) resolve correctly.
+
+providers = ["node"]
+
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+# Install from the monorepo root so workspaces are wired up.
+cmds = ["npm install --include-workspace-root --workspaces"]
+
+[phases.build]
+cmds = ["npm run build --workspace @pw/api"]
+
+[start]
+cmd = "npm run start --workspace @pw/api"

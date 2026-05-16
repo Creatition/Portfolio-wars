@@ -1,0 +1,22 @@
+{
+  "name": "@pw/shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared types, tRPC router, and mock data for Portfolio Wars apps.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@trpc/server": "11.0.0-rc.466",
+    "superjson": "2.2.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "5.5.3"
+  }
+}

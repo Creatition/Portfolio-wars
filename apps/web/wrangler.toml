@@ -1,0 +1,20 @@
+# Cloudflare Pages config for @pw/web.
+# After running `npm run build:cf`, deploy with:
+#   wrangler pages deploy .vercel/output/static
+#
+# Or use the Cloudflare dashboard's GitHub integration with these build settings:
+#   Framework preset:   Next.js
+#   Build command:      cd apps/web && npm run build:cf
+#   Build output dir:   apps/web/.vercel/output/static
+#   Root directory:     /
+#   NODE_VERSION:       20
+#   NPM_FLAGS:          --include-workspace-root --workspaces
+
+name = "portfolio-wars"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# Production env vars — also set these in the Cloudflare dashboard.
+[vars]
+NEXT_PUBLIC_API_URL = "https://YOUR-RAILWAY-APP.up.railway.app"

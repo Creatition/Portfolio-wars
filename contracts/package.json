@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-wars-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Funding Contract for Portfolio Wars — DO NOT DEPLOY without an independent audit.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:pulsechain": "hardhat run scripts/deploy.ts --network pulsechain"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "@nomicfoundation/hardhat-ethers": "3.0.6",
+    "@nomicfoundation/hardhat-chai-matchers": "2.0.7",
+    "@types/chai": "4.3.16",
+    "@types/mocha": "10.0.7",
+    "@types/node": "20.14.10",
+    "chai": "4.4.1",
+    "ethers": "6.13.1",
+    "hardhat": "2.22.6",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.3"
+  }
+}

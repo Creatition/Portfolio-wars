@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-wars",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portfolio Wars — PulseChain portfolio competition platform. Monorepo.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @pw/web",
+    "dev:api": "npm run dev --workspace @pw/api",
+    "build:web": "npm run build --workspace @pw/web",
+    "build:api": "npm run build --workspace @pw/api",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted via Next.js wouldn't ship Cormorant + JetBrains Mono without setup;
+   for the MVP we pull from Google Fonts. Swap to next/font/google for prod. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #0B0B0F;
+  color: #F4EFE0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" on, "cv02" on;
+}
+
+body {
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+/* Tabular figures for prices, ranks, percentages */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0B0B0F; }
+::-webkit-scrollbar-thumb { background: #2A2A36; border: 2px solid #0B0B0F; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #3A3A48; }
+
+/* Focus rings — gold, not blue */
+*:focus-visible {
+  outline: 2px solid #C9A24B;
+  outline-offset: 2px;
+}
+
+/* The eyebrow style — uppercase, spaced, mono */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #A09A8A;
+}
+
+/* Gold hairline rule used under H1 in body */
+.gold-rule {
+  border-bottom: 1px solid #C9A24B;
+}
+
+/* Hero radial glows */
+.hero-glow {
+  background:
+    radial-gradient(900px 380px at 20% 0%, rgba(201,162,75,0.12), transparent 60%),
+    radial-gradient(700px 300px at 95% 30%, rgba(157,91,226,0.08), transparent 60%);
+}
+.profile-glow {
+  background: radial-gradient(600px 200px at 10% 0%, rgba(201,162,75,0.10), transparent 60%);
+}
